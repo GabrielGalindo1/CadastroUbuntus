@@ -1,0 +1,40 @@
+﻿@model ListaModel
+@{
+    ViewData["Title"] = "Editar Ubuntu";
+}
+<div class="text-center">
+
+    <h1 class= 'display-4'>Editar Ubuntu</h1>
+
+</div>
+
+<form asp-controller="Lista" asp-action="Editar" method="post">
+
+  <div class="form-group">
+    <label for="nome" class="form-label">Nome</label>
+    <input type="text" asp-for="Nome" class="form-control" placeholder = "Digite seu nome" maxlength="100" minlength="3">
+  
+  </div>
+
+  <div class="form-group">
+    <label for="linguagem" class="form-label">Linguagem</label>
+    <input type="text" asp-for="Linguagem" class="form-control" placeholder = "Linguagem que conhece" maxlength="100" minlength="2">
+
+  </div>
+
+  <div class="form-group">
+    <label for="conhecimento" class="form-label">Conhecimento</label>
+    <input type="number" asp-for="Conhecimento" class="form-control" placeholder = "Insira do 0 ao 10" maxlength="100" minlength="0">
+
+  </div>
+
+        <script>
+            function funcao1()
+            {
+            alert("Ubuntu Alterado com Sucesso !");
+            }
+        </script>
+
+        <button type="submit" class="btn btn-primary" asp-controller="Lista" asp-action="Editar" onclick="funcao1()" value="Exibir Alert" >Alterar</button>
+        <a class="btn btn-secondary" asp-action="Index" asp-controller="Lista" role= "button">Voltar</a>
+</form>

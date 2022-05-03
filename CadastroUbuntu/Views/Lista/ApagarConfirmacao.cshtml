@@ -1,0 +1,16 @@
+﻿@model ListaModel
+@{
+    ViewData["Title"] = "Confirmação apagar o Ubuntu";
+}
+<h3>Realmente deseja apagar o Ubuntu (@Model.Nome)? </h3>
+
+        <script>
+            function funcao1()
+            {
+            alert("Ubuntu Apagado com Sucesso !");
+            }
+        </script>
+
+<a class="btn btn-primary" role="button" asp-controller="Lista" asp-action="Index">Cancelar exclusão</a>
+<a class="btn btn-danger" role="button"  asp-controller="Lista" asp-action="Apagar" asp-route-id="@Model.Id" onclick="funcao1()" value="Exibir Alert" >Confirmar exclusão</a>
+
